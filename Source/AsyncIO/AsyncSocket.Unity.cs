@@ -45,9 +45,9 @@ namespace AsyncIO
 
         public ProtocolType ProtocolType { get; private set; }
 
-        public abstract IPEndPoint LocalEndPoint { get; }
+        public abstract EndPoint LocalEndPoint { get; }
 
-        public abstract IPEndPoint RemoteEndPoint { get; }
+        public abstract EndPoint RemoteEndPoint { get; }
 
         public bool NoDelay
         {
@@ -213,11 +213,11 @@ namespace AsyncIO
 
         public abstract void Dispose();
 
-        public abstract void Bind(IPEndPoint localEndPoint);
+        public abstract void Bind(EndPoint localEndPoint);
 
         public abstract void Listen(int backlog);
 
-        public abstract void Connect(IPEndPoint endPoint);
+        public abstract void Connect(EndPoint endPoint);
 
         public abstract void Accept(AsyncSocket socket);
 

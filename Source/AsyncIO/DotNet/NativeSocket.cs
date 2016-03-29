@@ -29,14 +29,14 @@ namespace AsyncIO.DotNet
             m_outSocketAsyncEventArgs.Completed += OnAsyncCompleted;
         }
 
-        public override System.Net.IPEndPoint LocalEndPoint
+        public override EndPoint LocalEndPoint
         {
-            get { return (IPEndPoint)m_socket.LocalEndPoint; }
+            get { return m_socket.LocalEndPoint; }
         }
 
-        public override IPEndPoint RemoteEndPoint
+        public override EndPoint RemoteEndPoint
         {
-            get { return (IPEndPoint)m_socket.RemoteEndPoint; }
+            get { return m_socket.RemoteEndPoint; }
         }
 
         private void OnAsyncCompleted(object sender, SocketAsyncEventArgs e)
@@ -122,7 +122,7 @@ namespace AsyncIO.DotNet
             (m_socket as IDisposable).Dispose();
         }
 
-        public override void Bind(System.Net.IPEndPoint localEndPoint)
+        public override void Bind(EndPoint localEndPoint)
         {
             m_socket.Bind(localEndPoint);
         }
@@ -132,7 +132,7 @@ namespace AsyncIO.DotNet
             m_socket.Listen(backlog);
         }
 
-        public override void Connect(System.Net.IPEndPoint endPoint)
+        public override void Connect(EndPoint endPoint)
         {
             m_outSocketAsyncEventArgs.RemoteEndPoint = endPoint;
 

@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="AsyncIO.Unity.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SocketExtensions.cs">
+    <Files>
+      <File FileName="DotNet/NativeSocket.cs" Line="149" Column="61" />
+      <File FileName="AsyncSocket.Unity.cs" Line="50" Column="33" />
+      <File FileName="SocketExtensions.cs" Line="14" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
